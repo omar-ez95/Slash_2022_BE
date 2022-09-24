@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-&6#qvgo6^p-eq6s)b@4x7j032@1rd!arv8aq81ylg_s+^klx92
 DEBUG = True
 
 CORS_ALLOW_ALL_ORIGINS = True
-ALLOWED_HOSTS = ['*','inspery.com','www.inspery.com','django-env.eba-phifzq3k.eu-central-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['*','inspery.com','www.inspery.com','carbonized.eba-phifzq3k.eu-central-1.elasticbeanstalk.com']
 SITE_ID = 1
 # Application definition
 
