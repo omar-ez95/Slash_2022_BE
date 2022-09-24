@@ -47,3 +47,55 @@ class LoginAPI(generics.GenericAPIView):
       "user": UserSerializer(user, context=self.get_serializer_context()).data,
       "token": token
     })
+
+# User Details API
+class UserDetails(generics.GenericAPIView):
+  serializer_class = UserSerializer
+  permission_classes = [IsAuthenticated]
+
+  def get(self, request, *args, **kwargs):
+    user = request.user
+    return Response({
+      "user": UserSerializer(user, context=self.get_serializer_context()).data
+    })
+
+
+# Get User API
+class UserAPI(generics.RetrieveAPIView):
+  permission_classes = [
+    permissions.IsAuthenticated,
+  ]
+  serializer_class = UserSerializer
+
+  def get_object(self):
+    return self.request.user
+
+
+@api_view(['GET', ])
+def api_profile_details_view(request, id):
+  try:
+    user = get_object_or_404(User, id=id)
+    profile = get_object_or_404(Profile, user=user)
+  except User.DoesNotExist:
+    return Response(status=status.HTTP_404_NOT_FOUND)
+  if request.method == "GET":
+    serializer = ProfileSerializer(profile)
+    return Response(serializer.data)
+
+@api_view(['PUT', ])
+def api_edit_profile_view(request, id):
+  try:
+    # user = get_object_or_404(User, username=username)
+    profile = get_object_or_404(Profile, id=id)
+
+  except User.DoesNotExist:
+    return Response(status=status.HTTP_404_NOT_FOUND)
+  if request.method == "PUT":
+    serializer = ProfileSerializer(profile, data=request.data)
+    data={}
+    if serializer.is_valid():
+      serializer.save()
+      data["success"] = "updated successful"
+      return Response(serializer.data)
+    return Response(serializer.errors, status= status.HTTP_400_BAD_REQUEST)
+
