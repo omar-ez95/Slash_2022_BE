@@ -40,7 +40,6 @@ INSTALLED_APPS = [
 
     'authy',
     # third party apps 
-    'django_seed',
     'django.contrib.sites',
     'rest_framework',
     'knox',
