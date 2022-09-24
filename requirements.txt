@@ -94,7 +94,6 @@ pycparser==2.20
 pydot-ng==2.0.0
 pyinstaller==5.4.1
 pyinstaller-hooks-contrib==2022.10
-PyJWT==2.1.0
 pyparsing==2.4.7
 pytest==7.1.1
 python-crontab==2.5.1
