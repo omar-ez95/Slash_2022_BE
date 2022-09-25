@@ -191,9 +191,9 @@ django_heroku.settings(locals())
 #     "*",
 #     "https://slash-2022-fe.vercel.app/"
 # ]
-CORS_ORIGIN_WHITELIST=[
-    "https://slash-2022-fe.vercel.app/"
-]
+# CORS_ORIGIN_WHITELIST=[
+#     "https://slash-2022-fe.vercel.app/"
+# ]
 CORS_ALLOW_HEADERS = (
         'x-requested-with',
         'content-type',
