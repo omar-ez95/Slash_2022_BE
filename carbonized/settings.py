@@ -188,4 +188,5 @@ django_heroku.settings(locals())
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",    
     "*",
+    "https://slash-2022-fe.vercel.app/"
 ]
