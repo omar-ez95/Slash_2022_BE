@@ -18,9 +18,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
-from rest_framework.schemas import get_schema_view
 from rest_framework.documentation import include_docs_urls
-from rest_framework.permissions import IsAdminUser
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
@@ -32,11 +30,5 @@ urlpatterns = [
 
     # //this 2 links are for the documentaion    
     path('docs/', include_docs_urls(title='slash'),),
-    path('schema', get_schema_view(
-        title="inspery",
-        description="API for all things …",
-        version="1.0.0",
-        permission_classes=[IsAdminUser]
-    ), name='openapi-schema'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
 
