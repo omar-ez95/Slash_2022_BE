@@ -9,7 +9,7 @@ from PIL import Image
 from django.conf import settings
 import os
 from django.contrib.auth.models import Group
-
+from articles.models import Article, Discource
 
 def user_directory_path(instance, filename):
     # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
@@ -30,6 +30,7 @@ class Profile(models.Model):
     last_name = models.CharField(max_length=50, null=True, blank=True)
     profile_info = models.TextField(max_length=150, null=True, blank=True)
     created = models.DateField(auto_now_add=True)
+    Discource = models.ManyToManyField(Discource, null=True, blank=True)
     picture = models.ImageField(
         upload_to=user_directory_path, blank=True, null=True, verbose_name='Picture', )
 

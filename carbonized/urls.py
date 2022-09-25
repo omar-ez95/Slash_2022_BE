@@ -27,7 +27,7 @@ urlpatterns = [
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('authy/', include('authy.urls')),
-
+    path('', include('articles.urls')),
     # //this 2 links are for the documentaion    
     # path('docs/', include_docs_urls(title='slash'),),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 

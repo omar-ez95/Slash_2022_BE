@@ -182,3 +182,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 django_heroku.settings(locals())
+
+
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",    
+    "*",
+]
