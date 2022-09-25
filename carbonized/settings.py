@@ -190,3 +190,11 @@ CORS_ALLOWED_ORIGINS = [
     "*",
     "https://slash-2022-fe.vercel.app/"
 ]
+CORS_ALLOW_HEADERS = (
+        'x-requested-with',
+        'content-type',
+        'accept',
+        'origin',
+        'authorization',
+        'x-csrftoken'
+)
