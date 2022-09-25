@@ -29,6 +29,6 @@ urlpatterns = [
     path('authy/', include('authy.urls')),
 
     # //this 2 links are for the documentaion    
-    path('docs/', include_docs_urls(title='slash'),),
+    # path('docs/', include_docs_urls(title='slash'),),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
 
