@@ -1,18 +1,6 @@
 ll_env
 db.sqlite3
-#AjMuNrm/esOMLH/Eg0dLf1Ep+NzxX1fllw/7cyYA
-#AKIAQHLBFUA7RITPOGSE
-# +---[RSA 3072]----+
-# |       .o.+o     |
-# |      .o+o+....  |
-# |       =o=o++..o.|
-# |      o +o=o . .o|
-# |       BS.oo.    |
-# |     .*o+o .     |
-# |     E+oo.       |
-# |   . .+o ..      |
-# |    o. =B=.      |
-# +----[SHA256]-----+
+
 # Created by https://www.gitignore.io
 
 ### OSX ###
